@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,600;1,500;1,600&family=Montserrat:ital,wght@0,300;0,400;1,200;1,300&family=Roboto:ital,wght@0,400;1,300;1,400&family=Source+Sans+Pro:ital,wght@0,200;0,300;1,200&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-family: var(--sansPro);
+}
+
+
+:root{
+    --roboto:'Roboto', sans-serif;
+    --sansPro:'Source Sans Pro', sans-serif;
+    --karlo:'Montserrat', sans-serif;
+    --monster:'Montserrat', sans-serif;
+}
+
+.container{
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+/* header start  */
+
+.header{
+    width: 100%;
+    height: 90vh;
+    background-image: url(/img/headerbanner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.navigation{
+    width: 100%;
+    height: 10vh;
+    position: fixed;
+    background: linear-gradient(to right, white, whitesmoke);
+    box-shadow: 1px 12px 50px black,
+    1px 12px 80px black,
+    1px 12px 100px black;
+    z-index: 1;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+}
+
+.nav__logo{
+    width: 10%;
+    display: block;
+}
+.nav__lang select{
+    border: none;
+    font-size: 1.5rem;
+    outline: none;
+    letter-spacing: 2px;
+    font-family: var(--karlo);
+}
+
+.navbar__nav a{
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 1.2rem;
+    color: black;
+    font-family: var(--roboto);
+    letter-spacing: 2px;
+}
+.nav__icon i{
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.banner h1{
+    position: absolute;
+    top: 40%;
+    left: 28%;
+    font-size: 4rem;
+    color: white;
+    font-family: var(--roboto);
+    font-style: italic;
+    animation: banner 2s linear;
+}
+@keyframes  banner{
+    0%,100%{
+        word-spacing: 0px;
+        opacity: 1;
+    }
+    50%{
+        word-spacing: 15px;
+        opacity: 0.7;
+       
+    }
+}
+
+
+/* blog */
+
+
+.blog{
+    width: 100%;
+    padding: 3rem 0;
+    background-color: white;
+}
+.blog .title{
+    text-align: center;
+    font-family: var(--karlo);
+    font-size: 2rem;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+.blog__content{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 3rem;
+    padding-top: 5rem;
+    border-top: 1px solid black;
+}
+
+.blog__item{
+    background-color: rgb(179, 179, 179);
+    padding: 8px 8px;
+    transition: 0.5s;
+}
+.blog__item:hover{
+    border: 1px solid red;
+}
