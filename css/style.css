@@ -16,7 +16,9 @@
     --karlo:'Montserrat', sans-serif;
     --monster:'Montserrat', sans-serif;
 }
-
+html{
+    scroll-behavior: smooth;
+}
 .container{
     max-width: 1320px;
     margin: 0 auto;
@@ -77,12 +79,15 @@ img{
     font-family: var(--roboto);
     letter-spacing: 2px;
 }
+
 .nav__icon i{
     margin-left: 10px;
     margin-right: 10px;
     font-size: 1.2rem;
 }
-
+.nav__icon .fa-bars{
+    display: none;
+}
 .banner h1{
     position: absolute;
     top: 40%;
@@ -191,7 +196,7 @@ img{
 
 .books{
     width: 100%;
-    padding: 4rem;
+    padding: 4rem 0;
     background-color: whitesmoke;
     position: relative;
 }
@@ -325,4 +330,80 @@ img{
     border-bottom: 1px solid #000;
     left: 28%;
     top: 48%;
+}
+
+.footer{
+    width: 100%;
+    padding: 4rem;
+    background-color: #1A1A1A;
+}
+.footer__content{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+.footer__item{
+    cursor: pointer;
+}
+
+.footer__item h2{
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    font-family: var(--karlo);
+    letter-spacing: 2px;
+    font-weight: 100;
+    font-size: 1.8rem;
+}
+
+.footer__item a{
+    display: block;
+    color: white;
+    font-family: var(--sansPro);
+    line-height: 3rem;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    opacity: 0.6;
+    transition: all 0.1s linear;
+}
+
+.footer__item a:hover{
+    opacity: 1;
+}
+
+
+.copyright{
+    width: 100%;
+    background-color: #282828;
+}
+.copyright__content{
+    display: flex;
+    height: 8vh;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.copyright__content p{
+    color: rgb(159, 154, 154);
+    font-family: var(--monster);
+}
+.copyright__content a{
+     color: white;
+     font-weight: 900;
+}
+.top{
+    position: fixed;
+    background-color: #1A1A1A;
+    width: 50px;
+    height: 50px;
+    right: 10px;
+    top: 84%;
+    z-index: 999;
+    color: white;
+    border-radius: 10px;
+    font-size: 2rem;
+    transition: 1s;
+}
+.header:hover .top{
+    display: hidden;
 }
